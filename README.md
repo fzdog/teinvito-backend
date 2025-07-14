@@ -1,4 +1,10 @@
-# Backend - Te Invito App
+# Te Invito Backend
+
+Backend para la aplicación Te Invito - Sistema de gestión de invitados
+
+## Descripción
+
+API REST desarrollada con Node.js, Express y MongoDB para la gestión de invitados y eventos.
 
 ## Configuración
 
@@ -16,6 +22,14 @@
    ```bash
    npm run dev
    ```
+
+## Características
+
+- ✅ API REST con Express.js
+- ✅ Base de datos MongoDB con Mongoose
+- ✅ CORS configurado
+- ✅ Variables de entorno
+- ✅ Hotreload con Nodemon
 
 ## Despliegue
 
