@@ -9,11 +9,13 @@ API REST desarrollada con Node.js, Express y MongoDB para la gestión de invitad
 ## Configuración
 
 1. Copia el archivo `.env` y actualiza los valores según tu entorno:
+
    - `MONGODB_URI`: URL de conexión a MongoDB
    - `PORT`: Puerto donde correrá el servidor
    - `CORS_ORIGIN`: Origen permitido para CORS (URL del frontend)
 
 2. Instala dependencias:
+
    ```bash
    npm install
    ```

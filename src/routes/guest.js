@@ -7,7 +7,7 @@ const router = express.Router();
 // GET /api/invitado/all
 router.get('/all', async (req, res) => {
   try {
-    const guests = await Guest.find({}, '-_id name token confirmed attendees confirmationDate');
+    const guests = await Guest.find({}, '-_id name token confirmed attendees confirmationDate foto');
     res.json(guests);
   } catch (err) {
     res.status(500).json({ message: 'Error del servidor.' });
@@ -17,12 +17,12 @@ router.get('/all', async (req, res) => {
 // POST /api/invitado
 router.post('/', async (req, res) => {
   try {
-    const { name } = req.body;
+    const { name, foto } = req.body;
     if (!name) {
       return res.status(400).json({ message: 'El nombre es requerido.' });
     }
     const token = uuidv4();
-    const guest = new Guest({ name, token });
+    const guest = new Guest({ name, token, foto });
     await guest.save();
     res.status(201).json({ message: 'Invitado creado.', token });
   } catch (err) {

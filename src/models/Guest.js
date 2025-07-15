@@ -6,6 +6,7 @@ const guestSchema = new mongoose.Schema({
   confirmed: { type: Boolean, default: false },
   attendees: { type: Number, default: 0 },
   confirmationDate: { type: Date },
+  foto: { type: String },
 });
 
 export default mongoose.model('Guest', guestSchema);
