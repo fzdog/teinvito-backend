@@ -46,6 +46,7 @@ router.get("/:token", async (req, res) => {
 			name: guest.name,
 			confirmed: guest.confirmed,
 			attendees: guest.attendees,
+			foto: guest.foto,
 		});
 	} catch (err) {
 		res.status(500).json({ message: "Error del servidor." });
