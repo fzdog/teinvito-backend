@@ -68,8 +68,8 @@ router.post("/:token/confirmar", async (req, res) => {
 		guest.confirmationDate = new Date();
 		await guest.save();
 		let message = confirmed
-			? "🎉 ¡Gracias por confirmar tu asistencia! 🎉"
-			: "😢 Lamentamos que no puedas asistir. 🔄 En todo caso, puedes cambiar de opinión en cualquier momento y volver a este formulario para confirmar. ✅ Tu respuesta ha sido registrada. ¡Gracias!🙏";
+			? "¡Gracias por confirmar tu asistencia!"
+			: "😢 Lamentamos que no puedas asistir. 🔄 En todo caso, puedes cambiar de opinión en cualquier momento y volver a este formulario para confirmar. ✅ ";
 		res.json({ message, confirmationDate: guest.confirmationDate });
 	} catch (err) {
 		res.status(500).json({ message: "Error del servidor." });
